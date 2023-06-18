@@ -1,0 +1,113 @@
+@forward "./partials/";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700&display=swap');
+header{
+    padding-top: 2.5em;
+    background: transparent;
+    font-family: 'Barlow Condensed',sans-serif;
+    .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+           &::before {
+               content: "";
+               position: absolute;
+               width: 473px;
+               height: 1px;
+               left: 240px;
+               top: 88px;
+               background: #FFFFFF;
+               mix-blend-mode: normal;
+               opacity: 0.25;
+               z-index: 99;
+           }
+       .logo{
+         padding-left: 3.5em;
+       }
+
+        .ham{
+            display: none;
+        }
+        .navBar{
+            height: 96px;
+           background: rgba(255, 255, 255, 0.04);
+           backdrop-filter: blur(40.7742px);
+            display: flex;
+            align-items: center;
+            padding-inline: 7em;
+         
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            height: 96px;
+            align-items: center;
+            margin-right: 3.5em;
+            li{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                gap: .495em;
+                // height: 100%;
+                padding-block: 2.4em;
+                &:not(:last-child){
+                    margin-right: 3em;
+                    gap:.5em
+                }
+                &:nth-child(2){
+                    margin-right: 3.2em;
+                    gap:.75em;
+                }
+                 &:nth-child(1) {
+                     margin-right: 3.4em;
+                      gap:.4em;
+                      padding-left: .8em;
+                    //   a{
+                    //     margin-left: 1px;
+                    //   }
+                 }
+                 cursor: pointer;
+                 &:hover::after {
+                     content: "";
+                     position: absolute;
+                     bottom: 0;
+                     width: 90%;
+                     height: 3px;
+                     background: #ccc;
+                     transition: background 1s ease-in;
+                   
+                 }
+                 &.active::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 90%;
+                    height: 3px;
+                    background: #fff;
+
+                 }
+               
+                a{
+                     color: #fff;
+                     font-family: 'Barlow Condensed',
+                     sans-serif;
+                     text-transform: uppercase;
+                     letter-spacing: 2.7px;
+                     font-size: 1em;
+                     font-weight: 300;
+
+                }
+                span{
+                     color: #fff;
+                     font-family: 'Barlow Condensed',
+                     sans-serif;
+                     letter-spacing: 2.7px;
+                     font-size: 1em;
+
+                }
+            }
+        }
+        }
+    }
+}

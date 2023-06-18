@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Bellefair';
+    src: url('/fonts/Bellefair-Regular.woff2') format('woff2'),
+        url('/fonts/Bellefair-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Bellefair';
+
+}
+.container{
+    max-width: 1440px;
+    margin-inline: auto;
+    
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700&display=swap");
+@font-face {
+  font-family: "Bellefair";
+  src: url("/fonts/Bellefair-Regular.woff2") format("woff2"), url("/fonts/Bellefair-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Bellefair";
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+header {
+  padding-top: 2.5em;
+  background: transparent;
+  font-family: "Barlow Condensed", sans-serif;
+}
+header .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+header .nav::before {
+  content: "";
+  position: absolute;
+  width: 473px;
+  height: 1px;
+  left: 240px;
+  top: 88px;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  z-index: 99;
+}
+header .nav .logo {
+  padding-left: 3.5em;
+}
+header .nav .ham {
+  display: none;
+}
+header .nav .navBar {
+  height: 96px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  display: flex;
+  align-items: center;
+  padding-inline: 7em;
+}
+header .nav .navBar ul {
+  display: flex;
+  flex-direction: row;
+  height: 96px;
+  align-items: center;
+  margin-right: 3.5em;
+}
+header .nav .navBar ul li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0.495em;
+  padding-block: 2.4em;
+  cursor: pointer;
+}
+header .nav .navBar ul li:not(:last-child) {
+  margin-right: 3em;
+  gap: 0.5em;
+}
+header .nav .navBar ul li:nth-child(2) {
+  margin-right: 3.2em;
+  gap: 0.75em;
+}
+header .nav .navBar ul li:nth-child(1) {
+  margin-right: 3.4em;
+  gap: 0.4em;
+  padding-left: 0.8em;
+}
+header .nav .navBar ul li:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 3px;
+  background: #ccc;
+  transition: background 1s ease-in;
+}
+header .nav .navBar ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 3px;
+  background: #fff;
+}
+header .nav .navBar ul li a {
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  font-size: 1em;
+  font-weight: 300;
+}
+header .nav .navBar ul li span {
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  font-size: 1em;
+}/*# sourceMappingURL=main.css.map */

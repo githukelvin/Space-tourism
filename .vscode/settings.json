@@ -1,5 +1,6 @@
 {
     "marquee.widgets.npm-stats.packageNames": [
         "space-tourism-page"
-    ]
+    ],
+    "compile-hero.disable-compile-files-on-did-save-code": false
 }
