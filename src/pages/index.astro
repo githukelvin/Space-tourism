@@ -1,17 +1,28 @@
 ---
+import Para from '../components/Para.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Space Tourism page">
 	<main>
-	
+		<div class="container content">
+			<div class="left">
+				<h2>so, you want to travel to</h2>
+				<h1>space</h1>
+				<Para  text="Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!"/>
+			</div>
+			<div class="right">
+				<a href="/explore">explore</a>
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Barlow:wght@300;400;500&display=swap');
 	body{
 		width: 100%;
-		height: 100dvh;
+		height: 105dvh;
 		background-image: url("assets/home/background-home-desktop.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -30,4 +41,65 @@ import Layout from '../layouts/Layout.astro';
 		}
 		
 	}
+	.content{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding-inline:10.4em;
+		gap: 24.45em;
+		margin-top: 15.7em;
+	}
+	.left{
+		display:flex;
+		flex-direction: column;
+
+	}
+	.left h2{
+		letter-spacing:4.72px;
+		color:#d0d6f9;
+		font-size: 28px;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-family: 'Barlow Condensed', sans-serif;
+	}
+	.left h1{
+		font-size: 150px;
+		color:#fff;
+		line-height: 1;
+		font-family :'bellefair';
+		font-weight: 300;
+		margin-top: .24em;
+		text-transform:uppercase;
+		margin-bottom:.225em;
+	}
+	
+	.right{
+		border-radius: 50%;
+		width:272px;
+		height: 272px;
+		background-color: #fff;
+		cursor:pointer;
+		display:grid;
+		place-items:center;
+		position: relative;
+		margin-top:6.8em;
+	}
+		.right a{
+			color:#0b0D17;
+		letter-spacing: 2px;
+		font-size:2em;
+		line-height:1;
+		font-family :'bellefair';
+		text-transform:uppercase;
+		transition: all 3s ease-out;
+		}
+		.right:hover::before{
+			content:"";
+			z-index: -55;
+			position:absolute;
+			transition: all 3s ease-out;
+			width:450px;
+			height: 450px;
+			border-radius: 50%;
+			background-color: rgba(151, 151, 151, 0.192);
+		}
 </style>

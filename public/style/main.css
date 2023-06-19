@@ -4,7 +4,6 @@
   src: url("/fonts/Bellefair-Regular.woff2") format("woff2"), url("/fonts/Bellefair-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 * {
   padding: 0;
@@ -39,7 +38,7 @@ header .nav::before {
   position: absolute;
   width: 473px;
   height: 1px;
-  left: 240px;
+  left: 167px;
   top: 88px;
   background: #FFFFFF;
   mix-blend-mode: normal;
@@ -96,14 +95,6 @@ header .nav .navBar ul li:hover::after {
   height: 3px;
   background: #ccc;
   transition: background 1s ease-in;
-}
-header .nav .navBar ul li.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 90%;
-  height: 3px;
-  background: #fff;
 }
 header .nav .navBar ul li a {
   color: #fff;

@@ -1,0 +1,9 @@
+---
+export interface Props{
+    num:String;
+    desc:String;
+}
+const {num,desc} = Astro.props;
+---
+
+<p><span>{num}</span>{desc}</p>

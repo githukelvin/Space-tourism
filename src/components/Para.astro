@@ -1,0 +1,19 @@
+---
+export interface Props{
+    text:string;
+}
+const { text} = Astro.props;
+---
+
+<p>{text}</p>
+
+<style>
+     p{
+		font-size:18px;
+		color:#d0d6f9;
+		line-height: 32px;
+		font-weight: 400;
+		font-family: 'Barlow', sans-serif;
+
+	}
+</style>

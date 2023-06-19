@@ -1,9 +1,19 @@
 ---
+import Top from "../components/Top.astro";
 import Layout from "../layouts/Layout.astro";
+import Destinatn from "../components/Destinatn.vue";
 ---
 
 <Layout title="Destination page">
-    <main></main>
+    <main>
+        <div class="container ">
+            <div class="destination">
+               <Top num="01" desc="pick your destination" />
+               <Destinatn />
+            </div>
+        </div>
+            <!-- <Destination/> -->
+    </main>
 </Layout>
 
 <style>

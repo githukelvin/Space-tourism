@@ -15,7 +15,7 @@ header{
                position: absolute;
                width: 473px;
                height: 1px;
-               left: 240px;
+               left: 167px;
                top: 88px;
                background: #FFFFFF;
                mix-blend-mode: normal;
@@ -78,15 +78,7 @@ header{
                      transition: background 1s ease-in;
                    
                  }
-                 &.active::after{
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    width: 90%;
-                    height: 3px;
-                    background: #fff;
-
-                 }
+          
                
                 a{
                      color: #fff;
