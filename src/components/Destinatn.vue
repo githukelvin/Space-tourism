@@ -1,34 +1,71 @@
-<script setup>
-import data from "/public/data.json"
-console.log(data)
-let dest = data.destinations;
 
-function getText(event) {
-    console.log(event);
-        alert("i was clicked");
+<script setup>
+import { ref, watch, onMounted } from "vue";
+import data from "/src/data.json";
+
+const destination = ref(null);
+const dest = ref([]);
+
+function getText(e) {
+    let privo = document.querySelector(".activ");
+    privo.classList.remove("activ")
+    destination.value = e.target.textContent;
+    e.target.classList.add("activ")
 }
+
+watch(destination, (newValue) => {
+
+    dest.value = data.destinations.filter((item) => item.name === newValue);
+
+});
+
+onMounted(() => {
+    dest.value = data.destinations.filter((item) => item.name === "Moon");
+    let moon = document.querySelector(".mon");
+    moon.classList.add("activ")
+});
 
 </script>
 
+
+
+
 <template>
-   <div class="content ">
-      <div class="bar">
+    <div class="content">
+        <div class="bar">
             <ul>
-                <li @click="getText(e)">moon</li>
-                <li @click="getText(e)">mars</li>
-                <li @click="getText(e)">europa</li>
-                <li @click="getText(e)">titan</li>
+                <li class="mon" @click="getText">Moon</li>
+                <li  @click="getText">Mars</li>
+                <li  @click="getText">Europa</li>
+                <li  @click="getText">Titan</li>
             </ul>
         </div>
-     <div class="left" >
-            <!-- <img src="dasdsadasd" alt=""> -->
+        <div class="divs" v-for="item in dest" :key="item.name">
+            <div class="left">
+                <img :src=" '.' + item.images.png " :alt="item.name">
+                {{ img }}
+            </div>
+            <div class="right">
+                <h1>{{ item.name }}</h1>
+                <p>{{ item.description }}</p>
+                <div class="bottom">
+                    <div class="stats">
+                        <div class="stat">
+                            <h2>avg. distance</h2>
+                            <p>{{ item.distance }}</p>
+                        </div>
+                        <div class="stat">
+                            <h2>travel time</h2>
+                            <p>{{ item.travel }}</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
         </div>
-        <div class="right">
-          <p>fkdksnfdsafsafasd</p>
-        </div>
-   </div>
+      
+    </div>
 </template>
-
 
 
 <style lang="scss" scoped>
@@ -41,17 +78,19 @@ function getText(event) {
     font-size: 1rem;
 }
 .content{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    .left{
 
+  .divs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+      .left{
+         width:90%;
     }
     .right{
+        width:90%;
    
 }
+  }
  .bar{
-    position:absolute;
         ul{
             list-style: none;
             display: flex;
@@ -63,7 +102,7 @@ function getText(event) {
                 font-weight: 500;
                 color: #D0D6F9;
                 padding-block: .5em;
-                &.active{
+                &.activ{
                     border-bottom: 2px solid #fff;
 
                 }
