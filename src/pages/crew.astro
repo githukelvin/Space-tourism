@@ -1,9 +1,18 @@
 ---
+import Crewpart from "../components/Crewpart.vue";
+import Top from "../components/Top.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Crew page">
-    <main></main>
+       <main>
+        <div class="container ">
+            <div class="destination">
+               <Top num="02" desc="meet your crew" />
+               <Crewpart client:load/>
+            </div>
+        </div>
+    </main>
 </Layout>
 
 <style>
