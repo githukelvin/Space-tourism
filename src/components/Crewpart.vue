@@ -43,7 +43,7 @@ onMounted(() => {
                 <p>{{ item.bio }}</p>
             </div>
             <div class="right">
-                <img :src="item.images.png" :alt=" item.name ">
+                <img :src=" '.' + item.images.png" :alt=" item.name ">
             </div>
         </div>
 
