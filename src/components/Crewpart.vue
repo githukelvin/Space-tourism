@@ -64,14 +64,17 @@ onMounted(() => {
 }
 
 .content {
+    width:calc( 85% + .5em);
+    margin-inline:auto;
+    position: relative;
 
     .divs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        gap: 8em;
         .left {
-            width: 91%;
-            margin-top:8.7em;
+            width: 488px;
+            margin-top:9.6em;
             h3{
              
                 font-family: 'Bellefair';
@@ -88,7 +91,7 @@ onMounted(() => {
                 font-family: 'Bellefair';
                 font-style: normal;
                 font-weight: 300;
-                margin-top:.5em;
+                margin-top:.3em;
                 font-size: 56px;
                 line-height: 64px;
                 text-transform: uppercase;
@@ -98,6 +101,7 @@ onMounted(() => {
                 font-family: 'Barlow', sans-serif;
                 font-style: normal;
                 font-weight: 200;
+                margin-top:1.355em;
                 font-size: 18px;
                 line-height: 32px;
                 color: #D0D6F9;
@@ -106,18 +110,36 @@ onMounted(() => {
         }
 
         .right {
-            width: 90%;
+            position: relative;
+            z-index: 22;
+           width: min-content;
+            margin-top: -2.9em;
+            width: 568.07px;
+                height: 690px;
+            img{
+                width: 100%;
+                height: 690px;
+                object-fit: contain;
+               aspect-ratio: .5;
+               position: absolute;
+               bottom: 0;
+            }
 
         }
     }
 
     .bar {
+        position: absolute;
+        width: 132px;
+        height: 15px;
+        bottom:83px;
+       
         ul {
             list-style: none;
             display: flex;
-            // gap: 2em;
+            gap: 1.5em;
             width: 132px;
-            justify-content: space-evenly;
+            // justify-content: space-evenly;
 
             li {
                 width: 15px;
