@@ -71,9 +71,9 @@ onMounted(() => {
     .divs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8em;
+        gap: 3.5em;
         .left {
-            width: 488px;
+            width: 532px;
             margin-top:9.6em;
             h3{
              
@@ -105,7 +105,7 @@ onMounted(() => {
                 font-size: 18px;
                 line-height: 32px;
                 color: #D0D6F9;
-                width: 90%;
+                width: 85%;
             }
         }
 
