@@ -4,14 +4,13 @@ import { ref, watch, onMounted } from "vue";
 import data from "/src/data.json";
 
 let all = data.crew;
-console.log(all)
 const destination = ref(null);
 const dest = ref([]);
 
 function getText(e) {
     let privo = document.querySelector(".activ");
     privo.classList.remove("activ")
-    destination.value = e.target.textContent;
+    destination.value = e.target.getAttribute('title');
     e.target.classList.add("activ")
 }
 
@@ -31,10 +30,10 @@ onMounted(() => {
     <div class="content">
         <div class="bar">
             <ul>
-                <li :value="data.crew[0].name" class="mon" @click="getText"></li>
-                <li :value="data.crew[1].name" @click="getText"></li>
-                <li :value="data.crew[2].name" @click="getText"></li>
-                <li :value="data.crew[3].name" @click="getText"></li>
+                <li :title="all[0].name" class="mon" @click="getText"></li>
+                <li :title="all[1].name" @click="getText"></li>
+                <li :title="all[2].name" @click="getText"></li>
+                <li :title="all[3].name" @click="getText"></li>
             </ul>
         </div>
         <div class="divs" v-for="item in dest" :key="item.name">
@@ -54,6 +53,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -70,7 +70,39 @@ onMounted(() => {
         grid-template-columns: 1fr 1fr;
 
         .left {
-            width: 90%;
+            width: 91%;
+            margin-top:8.7em;
+            h3{
+             
+                font-family: 'Bellefair';
+                font-style: normal;
+                font-weight: 200;
+                font-size: 32px;
+                line-height: 37px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                mix-blend-mode: normal;
+                opacity: 0.5;   
+            }
+            h1{
+                font-family: 'Bellefair';
+                font-style: normal;
+                font-weight: 300;
+                margin-top:.5em;
+                font-size: 56px;
+                line-height: 64px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            p{
+                font-family: 'Barlow', sans-serif;
+                font-style: normal;
+                font-weight: 200;
+                font-size: 18px;
+                line-height: 32px;
+                color: #D0D6F9;
+                width: 90%;
+            }
         }
 
         .right {
@@ -83,7 +115,9 @@ onMounted(() => {
         ul {
             list-style: none;
             display: flex;
-            gap: 2em;
+            // gap: 2em;
+            width: 132px;
+            justify-content: space-evenly;
 
             li {
                 width: 15px;
@@ -99,6 +133,11 @@ onMounted(() => {
                     background: #FFFFFF;
                     mix-blend-mode: normal;
                     opacity: 1;
+                }
+                &:hover{
+                    background: #FFFFFF;
+                    mix-blend-mode: normal;
+                    opacity: 0.5
                 }
             }
         }

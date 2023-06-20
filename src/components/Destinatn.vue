@@ -55,7 +55,7 @@ onMounted(() => {
                             <p>{{ item.distance }}</p>
                         </div>
                         <div class="stat">
-                            <h2>travel time</h2>
+                            <h2>est. travel time</h2>
                             <p>{{ item.travel }}</p>
                         </div>
                     </div>
@@ -69,6 +69,7 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
 *{
     margin: 0;
@@ -78,19 +79,76 @@ onMounted(() => {
     font-size: 1rem;
 }
 .content{
+ margin-left: 2.2em;
 
   .divs{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 9.8em;
+
       .left{
-         width:90%;
+        padding-left: 1em;
+        margin-top: 4em;
+        width: min-content;
     }
     .right{
-        width:90%;
+    margin-top:6.3em;
+        width: 100%;
+
+       h1{
+        
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 115px;
+        text-transform: uppercase;
+        margin-bottom: .15em;
+        color: #FFFFFF;
+       }
+        p{
+		font-size:18px;
+		color:#d0d6f9;
+		line-height: 32px;
+		font-weight: 300;
+		font-family: 'Barlow', sans-serif;
+
+	}
+    .stats{
+        display: flex;
+        gap: 5em;
+        margin-top:5.1em;
+          .stat  h2{
+                font-family: 'Barlow Condensed', sans-serif;
+                font-style: normal;
+                font-weight: 200;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 2.3625px;
+                text-transform: uppercase;  
+                color:#d0d6f9;
+                
+            }
+           .stat  p{
+                margin-top:.5em;
+                font-family: 'Bellefair';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 32px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        
+    }
    
 }
   }
  .bar{
+    position: relative;
+    left:617px;
+    top: 64px;
+    width:fit-content;
         ul{
             list-style: none;
             display: flex;
@@ -99,9 +157,9 @@ onMounted(() => {
                text-transform: uppercase;
                 cursor: pointer;
                 letter-spacing:2.7px;
-                font-weight: 500;
+                font-weight: 400;
                 color: #D0D6F9;
-                padding-block: .5em;
+                padding-bottom: .7em;
                 &.activ{
                     border-bottom: 2px solid #fff;
 

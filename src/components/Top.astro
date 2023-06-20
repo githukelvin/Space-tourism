@@ -6,4 +6,29 @@ export interface Props{
 const {num,desc} = Astro.props;
 ---
 
-<p><span>{num}</span>{desc}</p>
+<p><span>{num }</span>{desc}</p>
+
+<style >
+    p{
+        display: flex;
+
+         line-height:33.6px;
+         font-family: 'Barlow Condensed';
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 4.725px;
+            color:#fff;
+            text-transform: uppercase;
+            margin-left: -.44em;
+            margin-top:2.75em;
+            gap: .88em;
+       
+    }
+        p  span{
+            font-family: 'Barlow Condensed';
+            font-weight: 600;
+             color: #FFFFFF;
+            mix-blend-mode: normal;
+            opacity: 0.25;
+        }
+</style>
