@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
-import data from "/src/data.json";
-// /*  */let data = await fetch("https://api.npoint.io/9f5a4fb03a388bf7cf99").then(res=> res.json());
+// import data from "/src/data.json";
+let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res => res.json());
 // console.log(data);
 const technology = ref(null);
 const tech = ref([]);
@@ -42,7 +42,7 @@ onMounted(() => {
             <div class="info" v-for="item in tech" :key="item.name">
                 <h4>the terminology ...</h4>
                 <h1>{{item.name}}</h1>
-                <p>{{ vWidth}}</p>
+                <p>{{ item.description }}</p>
             </div>
         </div>
         <div class="right" v-for="item in tech" :key="item.name">
@@ -50,8 +50,9 @@ onMounted(() => {
             <img v-if=" vWidth >768" :src="'.'+item.images.portrait" :alt="item.name" >
             <img v-else :src="'.'+ item.images.landscape" :alt="item.name">
         </div>
+         
     </div>
-</template>
+</template>  
 
 
 <style lang="scss" scoped>

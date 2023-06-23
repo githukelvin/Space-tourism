@@ -1,7 +1,8 @@
 
 <script setup>
 import { ref, watch, onMounted } from "vue";
-import data from "/src/data.json";
+// import data from "/src/data.json";
+let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res => res.json());
 
 let all = data.crew;
 const destination = ref(null);
@@ -64,19 +65,36 @@ onMounted(() => {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1rem;
 }
-
+@mixin responsive($size){
+    @media (max-width: $size){
+        @content;
+    }
+}
 .content {
     width:calc( 85% + .5em);
     margin-inline:auto;
     position: relative;
 
+    @include responsive(768px){
+        width: 100%;
+    }
+
     .divs {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3.5em;
+        @include responsive(768px){
+            grid-template-columns: 1fr;
+            gap: 1.5em;
+        }
         .left {
             width: 532px;
             margin-top:9.6em;
+            @include responsive(768px){
+                width: 458px;
+                margin:0 auto;
+                margin-top: 3.15em;
+            }
             h3{
              
                 font-family: 'Bellefair';
@@ -87,7 +105,12 @@ onMounted(() => {
                 text-transform: uppercase;
                 color: #FFFFFF;
                 mix-blend-mode: normal;
-                opacity: 0.5;   
+                opacity: 0.5;  
+                @include responsive(768px){
+                    text-align: center;
+                    font-size:24px;
+                    line-height:auto;
+                } 
             }
             h1{
                 font-family: 'Bellefair';
@@ -98,6 +121,14 @@ onMounted(() => {
                 line-height: 64px;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                @include responsive(768px){
+                    text-align: center;
+                    font-size:40px;
+                    line-height:auto;
+                    margin-top: -0.15em;
+
+                } 
+                
             }
             p{
                 font-family: 'Barlow', sans-serif;
@@ -108,6 +139,13 @@ onMounted(() => {
                 line-height: 32px;
                 color: #D0D6F9;
                 width: 85%;
+                @include responsive(768px){
+                    text-align: center;
+                    font-size:16px;
+                    width:100%;
+                    line-height: 28px;
+                    margin-top:0.33em;
+                } 
             }
         }
 
@@ -124,7 +162,23 @@ onMounted(() => {
                 object-fit: contain;
                aspect-ratio: .5;
                position: absolute;
+               object-position: center;
                bottom: 0;
+            }
+            @include responsive(768px){
+                width: 456.37px;
+                height: 556px;
+                margin-top: 5em;
+                margin-inline:auto;
+                img{
+                    width: 100%;
+                    height: 556px;
+                    object-fit: contain;
+                    aspect-ratio: 1;
+                    // position: absolute;
+                    object-position: center;
+                    // bottom: 0;
+                }
             }
 
         }
@@ -135,6 +189,14 @@ onMounted(() => {
         width: 132px;
         height: 15px;
         bottom:83px;
+
+        @include responsive(768px){
+            width: 100%;
+            left: 18em;
+            margin-inline:auto;
+            top:17.5em;
+            // margin-top: 2.5em;
+        }
        
         ul {
             list-style: none;
@@ -153,6 +215,10 @@ onMounted(() => {
                 mix-blend-mode: normal;
                 opacity: 0.17;
                 cursor: pointer;
+                @include responsive(768px){
+                    width: 10px;
+                    height: 10px;
+                }
                 &.activ{
                     background: #FFFFFF;
                     mix-blend-mode: normal;

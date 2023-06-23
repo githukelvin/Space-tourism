@@ -1,17 +1,19 @@
 ---
 import Crewpart from "../components/Crewpart.vue";
+import Sus from "../components/Sus.vue";
 import Top from "../components/Top.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Crew page">
-       <main>
-        <div class="container ">
+       <main> 
             <div class="crew">
               <div class="cr">
                  <Top num="02" desc="meet your crew" />
               </div>
-               <Crewpart client:load/>
+              <Sus client:load>
+                <Crewpart client:load/>
+            </Sus>
             </div>
         </div>
     </main>
@@ -26,23 +28,29 @@ import Layout from "../layouts/Layout.astro";
         background-repeat: no-repeat;
         
     }
-    @media screen and (max-width: 768px) {
-        body {
-            background-image: url("../assets/crew/background-crew-tablet.jpg");
-        }
-    }
-    /* Small devices */
-    @media screen and (max-width: 375px) {
-        body {
-            background-image: url("../assets/crew/background-crew-mobile.jpg");
-        }
-    }
+   
     .crew{
         width:90%;
         margin-inline:auto;
         
         .cr{
             margin-left:6.8em;
+        }
+    }
+     @media screen and (max-width: 768px) {
+        body {
+            background-image: url("../assets/crew/background-crew-tablet.jpg");
+            height: max-content;
+        }
+         .crew .cr{
+            margin-left:3.6em;
+        }
+    }
+
+    /* Small devices */
+    @media screen and (max-width: 375px) {
+        body {
+            background-image: url("../assets/crew/background-crew-mobile.jpg");
         }
     }
 </style>

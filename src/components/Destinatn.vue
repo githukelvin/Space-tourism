@@ -1,8 +1,8 @@
 
 <script setup>
 import { ref, watch, onMounted } from "vue";
-import data from "/src/data.json";
-// /*  */let data = await fetch("https://api.npoint.io/9f5a4fb03a388bf7cf99").then(res=> res.json());
+// import data from "/src/data.json";
+let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res=> res.json());
 // console.log(data);
 const destination = ref(null);
 const dest = ref([]);
@@ -53,7 +53,7 @@ onMounted(() => {
                     <div class="stats">
                         <div class="stat">
                             <h2>avg. distance</h2>
-                            <p>{{ item.distance +' km' }}</p>
+                            <p v-text="item.distance " ></p>
                         </div>
                         <div class="stat">
                             <h2>est. travel time</h2>
@@ -183,12 +183,9 @@ onMounted(() => {
         @include response(768px){
             display:grid;
             grid-template-columns: 1fr 1fr;
+            padding-bottom: 2em;
         }
           .stat {
-            @include response(768px){
-
-                width: 50%;
-            }
              h2{
                 font-family: 'Barlow Condensed', sans-serif;
                 font-style: normal;

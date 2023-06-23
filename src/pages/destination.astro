@@ -2,6 +2,7 @@
 import Top from "../components/Top.astro";
 import Layout from "../layouts/Layout.astro";
 import Destinatn from "../components/Destinatn.vue";
+import Sus from "../components/Sus.vue";
 ---
 
 <Layout title="Destination page">
@@ -9,8 +10,11 @@ import Destinatn from "../components/Destinatn.vue";
         <div class="container ">
             <div class="destination">
                <Top num="01" desc="pick your destination" />
-               <Destinatn client:load />
-            </div>
+               <Sus client:load>
+                <Destinatn client:load />
+                </Sus>
+               
+            </div> 
         </div>
     </main>
 </Layout>
