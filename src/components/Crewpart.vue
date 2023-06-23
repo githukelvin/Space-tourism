@@ -7,6 +7,7 @@ let all = data.crew;
 const destination = ref(null);
 const dest = ref([]);
 
+
 function getText(e) {
     let privo = document.querySelector(".activ");
     privo.classList.remove("activ")

@@ -2,7 +2,8 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
 import data from "/src/data.json";
-
+// /*  */let data = await fetch("https://api.npoint.io/9f5a4fb03a388bf7cf99").then(res=> res.json());
+// console.log(data);
 const destination = ref(null);
 const dest = ref([]);
 
@@ -43,7 +44,7 @@ onMounted(() => {
         <div class="divs" v-for="item in dest" :key="item.name">
             <div class="left">
                 <img :src=" '.' + item.images.png " :alt="item.name">
-                {{ img }}
+               
             </div>
             <div class="right">
                 <h1>{{ item.name }}</h1>
