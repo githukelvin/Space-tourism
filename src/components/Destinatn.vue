@@ -53,7 +53,7 @@ onMounted(() => {
                     <div class="stats">
                         <div class="stat">
                             <h2>avg. distance</h2>
-                            <p>{{ item.distance }}</p>
+                            <p>{{ item.distance +' km' }}</p>
                         </div>
                         <div class="stat">
                             <h2>est. travel time</h2>
@@ -87,22 +87,48 @@ onMounted(() => {
 .content{
  margin-left: 2.2em;
  @include response(768px){
-    
+    margin-left: 0;;
  }
 
   .divs{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 9.8em;
-
+    @include response(768px){
+        grid-template-columns: 1fr;
+        width: 573px;
+        margin-inline:auto;
+        gap: 0;
+    }
       .left{
         padding-left: 1em;
         margin-top: 4em;
         width: min-content;
+        width:460px;
+        height: 460px;
+        img{
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        @include response(768px){
+            margin-inline:auto;
+            margin-top: 1.5em;
+            padding-left: 0;
+            width: 300px;
+            height: 300px;
+        }
     }
     .right{
-    margin-top:6.3em;
+        margin-top:6.3em;
         width: 100%;
+
+        @include response(768px){
+            margin-top: 6.7em;
+            margin-inline:auto;
+            width: 573px;
+            
+        }
 
        h1{
         
@@ -114,6 +140,12 @@ onMounted(() => {
         text-transform: uppercase;
         margin-bottom: .15em;
         color: #FFFFFF;
+        @include response(768px){
+            font-size: 80px;
+            line-height: auto;
+            text-align: center;
+            margin-bottom: 0em;
+        }
        }
         p{
 		font-size:18px;
@@ -121,13 +153,43 @@ onMounted(() => {
 		line-height: 32px;
 		font-weight: 300;
 		font-family: 'Barlow', sans-serif;
-
+        @include response(768px){
+            font-size: 16px;
+            text-align: center;
+            line-height: 28px;
+            width: 95%;
+            margin-inline:auto;
+            margin-top:-5px;
+        }
 	}
     .stats{
         display: flex;
         gap: 5em;
         margin-top:5.1em;
-          .stat  h2{
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 444px;
+            height: 1px;
+            background-color: #383B4B;
+            top: -1.66em;
+            @include response(768px){
+                width:573px;
+                top: -1.9em;
+            }
+        }
+        @include response(768px){
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+          .stat {
+            @include response(768px){
+
+                width: 50%;
+            }
+             h2{
                 font-family: 'Barlow Condensed', sans-serif;
                 font-style: normal;
                 font-weight: 200;
@@ -136,9 +198,14 @@ onMounted(() => {
                 letter-spacing: 2.3625px;
                 text-transform: uppercase;  
                 color:#d0d6f9;
+                @include response(768px){
+                    line-height: auto;
+                    letter-spacing: 2.36px;
+                    text-align: center;
+                }
                 
             }
-           .stat  p{
+             p{
                 margin-top:.5em;
                 font-family: 'Bellefair';
                 font-style: normal;
@@ -147,7 +214,11 @@ onMounted(() => {
                 line-height: 32px;
                 text-transform: uppercase;
                 color: #FFFFFF;
-            }
+                @include response(768px){
+                    font-size: 28px;
+                    line-height: auto;
+                }
+            }}
         
     }
    
@@ -158,6 +229,12 @@ onMounted(() => {
     left:617px;
     top: 64px;
     width:fit-content;
+    @include response(768px){
+        left: 0;
+        margin-inline:auto;
+        top:25.54em;
+        // margin-top: 2em;
+    }
         ul{
             list-style: none;
             display: flex;
