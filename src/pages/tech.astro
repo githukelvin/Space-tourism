@@ -29,23 +29,33 @@ import Layout from "../layouts/Layout.astro";
         background-size: cover;
         background-repeat: no-repeat;
     }
-    @media screen and (max-width: 768px) {
-        body {
-            background-image: url("../assets/technology/background-technology-tablet.jpg");
-        }
-    }
-    /* Small devices */
-    @media screen and (max-width: 375px) {
-        body {
-            background-image: url("../assets/technology/background-technology-mobile.jpg");
-        }
-    }
+
      .tech{
          width:90%;
         margin-inline:auto;
         
         .cr{
             margin-left:6.8em;
+        }
+    }
+     @media screen and (max-width: 768px) {
+        body {
+            background-image: url("../assets/technology/background-technology-tablet.jpg");
+            height: max-content;
+        }
+            .tech{
+            width:100%;
+            margin-inline:auto;
+            
+            .cr{
+                margin-left:6em;
+            }
+        }
+    }
+    /* Small devices */
+    @media screen and (max-width: 375px) {
+        body {
+            background-image: url("../assets/technology/background-technology-mobile.jpg");
         }
     }
 </style>

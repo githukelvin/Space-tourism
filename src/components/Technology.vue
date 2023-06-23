@@ -61,19 +61,47 @@ onMounted(() => {
     font-family: 'Barlow', sans-serif;
     font-family: 'Barlow Condensed', sans-serif;
 }
+@mixin responsive($size){
+    @media (max-width: $size){
+        @content;
+    }
+}
 .content{
     display: flex;
+    width: 100%;
+    @include responsive(768px){
+        flex-direction:column-reverse;
+    }
     .left{
         display: flex;
         width: 50%;
         gap:5em;
         margin-left: 10.3em;
         margin-top:8.5em;
+
+        @include responsive(768px){
+            width: 100%;
+            margin-left: 0;
+            margin-top: -10.1em;
+            gap: 0em;
+            flex-direction: column;
+        }
                 .sideBar{
+                    @include responsive(768px){
+                        width:fit-content;
+                        margin-inline:auto;
+                        margin-bottom: 2.7em;
+                        
+                    }
+                    
             ul{
                 display:flex;
                 flex-direction: column;
                 gap: 2em;
+                @include responsive(768px){
+                    flex-direction: row;
+                    gap: 1em;
+                }
                 li{
                     display: grid;
                     place-items: center;
@@ -92,10 +120,21 @@ onMounted(() => {
                         color:#0b0d17;
                         background: #fff;
                     }
+                    @include responsive(768px){
+                        width: 60px;
+                        height: 60px;
+                        font-size: 24px;
+                        letter-spacing: 1.5px;
+                    }
                 }
             }
         }
         .info{
+            @include responsive(768px){
+                        width:458px;
+                        margin-inline:auto;
+                        padding-bottom: 2em;
+                    }
            
         h4{
             letter-spacing: 2.7px;
@@ -107,6 +146,14 @@ onMounted(() => {
             color:#d0d6f9;
             margin-bottom: 1.1em;
             margin-top: 2px;
+            @include responsive(768px){
+                text-align: center;
+                letter-spacing: 2.7px;
+                line-height:auto;
+                font-size: 16px;
+                margin-bottom: 1.3em;
+
+            }
         }
         h1{
             font-family: 'Bellefair';
@@ -116,6 +163,12 @@ onMounted(() => {
             font-weight: 300;
             line-height: 1;
             margin-bottom: .35em;
+            @include responsive(768px){
+                text-align: center;
+                font-size: 40px;
+                line-height: auto;
+                margin-bottom: .47em;
+            }
            
         }
         p{
@@ -124,6 +177,13 @@ onMounted(() => {
             font-size: 18px;
             width: 80%;
             color:#d0d6f9;
+            @include responsive(768px){
+                text-align: center;
+                line-height: 28px;
+                font-size: 1em;
+                width: 100%;
+                margin-inline:auto;
+            }
         }
         }
     }
@@ -132,6 +192,10 @@ onMounted(() => {
         margin-top:1.65em;
         height: 527px;
         margin-left: 5em;
+        @include responsive(768px){
+            margin-left: 0;
+            margin-top:3.4em;
+        }
         img{
             object-fit: cover;
             object-position: center;
