@@ -37,6 +37,7 @@ header .nav {
   align-items: center;
   justify-content: space-between;
   background: transparent;
+  position: relative;
 }
 header .nav::before {
   content: "";
@@ -65,6 +66,21 @@ header .nav .logo {
 }
 header .nav .ham {
   display: none;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+@media (max-width: 375px) {
+  header .nav .ham {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+    z-index: 9999;
+  }
 }
 header .nav .navBar {
   height: 96px;
@@ -80,6 +96,21 @@ header .nav .navBar {
     padding-left: 2.4em;
   }
 }
+@media (max-width: 375px) {
+  header .nav .navBar {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    width: 254px;
+    height: 667px;
+    top: 0px;
+    z-index: 999;
+    position: absolute;
+    right: 0px;
+    border: 0px solid #979797;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742271423px);
+  }
+}
 header .nav .navBar ul {
   display: flex;
   flex-direction: row;
@@ -92,6 +123,17 @@ header .nav .navBar ul {
     margin-right: 0em;
   }
 }
+@media (max-width: 375px) {
+  header .nav .navBar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    top: 200px;
+    width: 100%;
+    height: 100%;
+  }
+}
 header .nav .navBar ul li {
   position: relative;
   display: flex;
@@ -99,6 +141,11 @@ header .nav .navBar ul li {
   gap: 0.495em;
   padding-block: 2.4em;
   cursor: pointer;
+}
+@media (max-width: 375px) {
+  header .nav .navBar ul li {
+    padding-block: 1em;
+  }
 }
 header .nav .navBar ul li:not(:last-child) {
   margin-right: 3em;
@@ -128,6 +175,12 @@ header .nav .navBar ul li:first-child {
     margin-right: 2.3em;
   }
 }
+@media (max-width: 375px) {
+  header .nav .navBar ul li:first-child {
+    margin-right: 0em;
+    padding-left: 0em;
+  }
+}
 header .nav .navBar ul li:hover::after {
   content: "";
   position: absolute;
@@ -136,6 +189,11 @@ header .nav .navBar ul li:hover::after {
   height: 3px;
   background: #ccc;
   transition: background 1s ease-in;
+}
+@media (max-width: 375px) {
+  header .nav .navBar ul li:hover::after {
+    right: 0;
+  }
 }
 header .nav .navBar ul li a {
   color: #fff;
@@ -160,5 +218,10 @@ header .nav .navBar ul li span {
 @media (max-width: 768px) {
   header .nav .navBar ul li span {
     display: none;
+  }
+}
+@media (max-width: 375px) {
+  header .nav .navBar ul li span {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */

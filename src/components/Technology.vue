@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
-// import data from "/src/data.json";
-let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res => res.json());
+import data from "/src/data.json";
+// let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res => res.json());
 // console.log(data);
 const technology = ref(null);
 const tech = ref([]);
@@ -191,7 +191,7 @@ onMounted(() => {
         width: 515px;
         margin-top:1.65em;
         height: 527px;
-        margin-left: 5em;
+        margin-left: 7em;
         @include responsive(768px){
             margin-left: 0;
             margin-top:3.4em;
