@@ -126,6 +126,12 @@ onMounted(() => {
                         font-size: 24px;
                         letter-spacing: 1.5px;
                     }
+                    @include responsive(375px){
+                        width: 40px;
+                        height: 40px;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                    }
                 }
             }
         }
@@ -135,6 +141,10 @@ onMounted(() => {
                         margin-inline:auto;
                         padding-bottom: 2em;
                     }
+            // respon 375px
+            @include responsive(375px){
+                width:87.2%;
+            }
            
         h4{
             letter-spacing: 2.7px;
@@ -154,6 +164,11 @@ onMounted(() => {
                 margin-bottom: 1.3em;
 
             }
+            @include responsive(375px){
+                font-size: 14px;
+                letter-spacing: 2.362px;
+                margin-bottom: 1.5em;
+            }
         }
         h1{
             font-family: 'Bellefair';
@@ -168,6 +183,11 @@ onMounted(() => {
                 font-size: 40px;
                 line-height: auto;
                 margin-bottom: .47em;
+            }
+            @include responsive(375px){
+                font-size: 24px;
+                line-height: auto;
+                margin-bottom: .6em;
             }
            
         }
@@ -193,12 +213,17 @@ onMounted(() => {
         height: 527px;
         margin-left: 7em;
         @include responsive(768px){
+            width: 100%;
             margin-left: 0;
             margin-top:3.4em;
         }
         img{
             object-fit: cover;
             object-position: center;
+            @include responsive(375px){}
+        }
+        @include responsive(375px){
+            width: 375px;
         }
     }
 }

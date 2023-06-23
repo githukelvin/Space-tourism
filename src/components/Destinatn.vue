@@ -96,9 +96,12 @@ onMounted(() => {
     gap: 9.8em;
     @include response(768px){
         grid-template-columns: 1fr;
-        width: 573px;
+        width: 74.61%;
         margin-inline:auto;
         gap: 0;
+    }
+    @include response(375px){
+        width:87.2%;
     }
       .left{
         padding-left: 1em;
@@ -115,8 +118,12 @@ onMounted(() => {
             margin-inline:auto;
             margin-top: 1.5em;
             padding-left: 0;
-            width: 300px;
-            height: 300px;
+            width: 39.1%;
+            height: 39.1%;
+        }
+        @include response(375px){
+            width: 170px;
+            height: 170px;
         }
     }
     .right{
@@ -126,9 +133,13 @@ onMounted(() => {
         @include response(768px){
             margin-top: 6.7em;
             margin-inline:auto;
-            width: 573px;
+            width: 74.61%;
             
         }
+        @include response(375px){
+            width:87.2%;
+        }
+
 
        h1{
         
@@ -146,6 +157,9 @@ onMounted(() => {
             text-align: center;
             margin-bottom: 0em;
         }
+        @include response(375px){
+            font-size: 56px;
+        }
        }
         p{
 		font-size:18px;
@@ -160,6 +174,10 @@ onMounted(() => {
             width: 95%;
             margin-inline:auto;
             margin-top:-5px;
+        }
+        @include response(375px){
+            font-size: 15px;
+            line-height: 25px;
         }
 	}
     .stats{
@@ -179,11 +197,18 @@ onMounted(() => {
                 width:573px;
                 top: -1.9em;
             }
+
+            @include response(375px){
+                width: 87.2%;
+            }
         }
         @include response(768px){
             display:grid;
             grid-template-columns: 1fr 1fr;
             padding-bottom: 2em;
+        }
+        @include response(375px){
+            grid-template-columns: 1fr;
         }
           .stat {
              h2{
@@ -200,6 +225,9 @@ onMounted(() => {
                     letter-spacing: 2.36px;
                     text-align: center;
                 }
+                @include response(375px){
+                    font-size: 14px;
+                }   
                 
             }
              p{
@@ -214,6 +242,9 @@ onMounted(() => {
                 @include response(768px){
                     font-size: 28px;
                     line-height: auto;
+                }
+                @include response(375px){
+                    font-size: 28px;
                 }
             }}
         

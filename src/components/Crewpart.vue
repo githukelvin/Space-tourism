@@ -79,6 +79,7 @@ onMounted(() => {
         width: 100%;
     }
 
+
     .divs {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -87,11 +88,20 @@ onMounted(() => {
             grid-template-columns: 1fr;
             gap: 1.5em;
         }
+        @include responsive(375px){
+            display: flex;
+            flex-direction: column-reverse;
+        }
         .left {
             width: 532px;
             margin-top:9.6em;
             @include responsive(768px){
-                width: 458px;
+                width: 59.64%;
+                margin:0 auto;
+                margin-top: 3.15em;
+            }
+            @include responsive(375px){
+                width: 87.2%;
                 margin:0 auto;
                 margin-top: 3.15em;
             }
@@ -110,7 +120,10 @@ onMounted(() => {
                     text-align: center;
                     font-size:24px;
                     line-height:auto;
-                } 
+                }
+                @include responsive(375px){
+                    font-size: 16px;
+                }
             }
             h1{
                 font-family: 'Bellefair';
@@ -128,6 +141,9 @@ onMounted(() => {
                     margin-top: -0.15em;
 
                 } 
+                @include responsive(375px){
+                    font-size: 24px;
+                }
                 
             }
             p{
@@ -146,6 +162,10 @@ onMounted(() => {
                     line-height: 28px;
                     margin-top:0.33em;
                 } 
+                @include responsive(375px){
+                    font-size: 15px;
+                    line-height: 25px;
+                }
             }
         }
 
