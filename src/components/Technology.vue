@@ -10,10 +10,10 @@ let all = data.technology;
 let vWidth= ref('')
 
 function getText(e) {
-    let privo = document.querySelector(".active");
-    privo.classList.remove("active")
+    let privo = document.querySelector(".act");
+    privo.classList.remove("act")
     technology.value = e.target.getAttribute('crew');
-    e.target.classList.add("active")
+    e.target.classList.add("act")
 }
 
 watch(technology, (newValue) => {
@@ -25,7 +25,7 @@ onMounted(() => {
     vWidth.value = window.innerWidth;
     tech.value = data.technology.filter((item) => item.name === "Launch vehicle");
     let moon = document.querySelector(".first");
-    moon.classList.add("active");
+    moon.classList.add("act");
 });
 
 </script>
@@ -87,7 +87,7 @@ onMounted(() => {
                     letter-spacing: 2px;
                     color:#fff;
                     border: .5px solid #fff;
-                    &.active{
+                    &.act{
                         color:#0b0d17;
                         background: #fff;
                     }

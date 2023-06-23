@@ -10,6 +10,7 @@ const dest = ref([]);
 
 function getText(e) {
     let privo = document.querySelector(".activ");
+    
     privo.classList.remove("activ")
     destination.value = e.target.getAttribute('title');
     e.target.classList.add("activ")
