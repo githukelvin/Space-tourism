@@ -27,20 +27,7 @@ import Layout from '../layouts/Layout.astro';
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	@media screen and (max-width:768px) {
 
-		body{
-			background-image: url("../assets/home/background-home-tablet.jpg");
-		}
-		
-	}
-	/* Small devices */
-	@media screen and (max-width:375px) {
-		body{
-			background-image: url("../assets/home/background-home-mobile.jpg");
-		}
-		
-	}
 	.content{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -102,4 +89,51 @@ import Layout from '../layouts/Layout.astro';
 			border-radius: 50%;
 			background-color: rgba(151, 151, 151, 0.192);
 		}
+	@media screen and (max-width:768px) {
+
+		body{
+			background-image: url("../assets/home/background-home-tablet.jpg");
+			height: max-content;
+		}
+		.content{
+			grid-template-columns: 1fr;
+			margin-top:6.5em;
+			padding-inline:0em;
+			gap:0;
+			width:100%
+		}
+		.left{
+			width:450px;
+			margin-inline: auto;
+		}
+		.left h2{
+			letter-spacing: 3.39px;
+			font-size: 20px;
+			padding: 2px 0 0 2px;
+			text-align:center;
+
+
+		}
+		.left h1{
+			font-size: 150px;
+			margin-block: 0.16em;
+		
+		}
+		.right {
+			width: 242px;
+			height: 242px;
+			margin-top: 9.8em;
+			margin-inline:auto;
+		}
+
+		
+	}
+	/* Small devices */
+	@media screen and (max-width:375px) {
+		body{
+			background-image: url("../assets/home/background-home-mobile.jpg");
+		}
+		
+		
+	}
 </style>

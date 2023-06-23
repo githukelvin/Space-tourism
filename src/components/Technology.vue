@@ -42,12 +42,12 @@ onMounted(() => {
             <div class="info" v-for="item in tech" :key="item.name">
                 <h4>the terminology ...</h4>
                 <h1>{{item.name}}</h1>
-                <p>{{ item.description }}</p>
+                <p>{{ vWidth}}</p>
             </div>
         </div>
         <div class="right" v-for="item in tech" :key="item.name">
             
-            <img v-if=" vWidth >770" :src="'.'+item.images.portrait" :alt="item.name" >
+            <img v-if=" vWidth >768" :src="'.'+item.images.portrait" :alt="item.name" >
             <img v-else :src="'.'+ item.images.landscape" :alt="item.name">
         </div>
     </div>

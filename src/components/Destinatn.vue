@@ -79,8 +79,16 @@ onMounted(() => {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1rem;
 }
+@mixin response($size){
+    @media (max-width: $size){
+        @content;
+    }
+}
 .content{
  margin-left: 2.2em;
+ @include response(768px){
+    
+ }
 
   .divs{
     display: grid;

@@ -1,9 +1,17 @@
 @forward "./partials/";
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700&display=swap');
+@mixin responsive($size){
+    @media (max-width: $size){
+        @content;
+    }
+}
 header{
     padding-top: 2.5em;
     background: transparent;
     font-family: 'Barlow Condensed',sans-serif;
+    @include responsive(768px){
+        padding-top: 0em;
+    }
     .nav{
         display: flex;
         flex-direction: row;
@@ -21,9 +29,16 @@ header{
                mix-blend-mode: normal;
                opacity: 0.25;
                z-index: 99;
+               @include responsive(768px) {
+                     display: none;
+               }
            }
+        
        .logo{
          padding-left: 3.5em;
+            @include responsive(768px) {
+                padding-left: 2.5em;
+            }
        }
 
         .ham{
@@ -36,6 +51,10 @@ header{
             display: flex;
             align-items: center;
             padding-inline: 7em;
+            @include responsive(768px) {
+                padding-right: 3em;
+                padding-left: 2.4em;
+            }
          
 
         ul{
@@ -44,6 +63,9 @@ header{
             height: 96px;
             align-items: center;
             margin-right: 3.5em;
+            @include responsive(768px) {
+              margin-right: 0em;  
+            }
             li{
                 position: relative;
                 display: flex;
@@ -53,16 +75,25 @@ header{
                 padding-block: 2.4em;
                 &:not(:last-child){
                     margin-right: 3em;
-                    gap:.5em
+                    gap:.5em;
+                    @include responsive(768px){
+                        margin-right: 2.1em
+                    }
                 }
                 &:nth-child(2){
                     margin-right: 3.2em;
                     gap:.75em;
+                    @include responsive(768px){
+                        margin-right: 2.6em;
+                    }
                 }
-                 &:nth-child(1) {
+                 &:first-child {
                      margin-right: 3.4em;
                       gap:.4em;
                       padding-left: .8em;
+                        @include responsive(768px){
+                            margin-right: 2.3em;
+                        }
                     //   a{
                     //     margin-left: 1px;
                     //   }
@@ -88,6 +119,10 @@ header{
                      letter-spacing: 2.7px;
                      font-size: 1em;
                      font-weight: 300;
+                     @include responsive(768px) {
+                        font-size: 14px;
+                        letter-spacing: 2.36px;
+                     }
 
                 }
                 span{
@@ -96,6 +131,9 @@ header{
                      sans-serif;
                      letter-spacing: 2.7px;
                      font-size: 1em;
+                     @include responsive(768px){
+                        display: none;
+                     }
 
                 }
             }
