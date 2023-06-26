@@ -1,8 +1,6 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
-import data from "/src/data.json";
-// let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res => res.json());
-// console.log(data);
+let data = await fetch("https://api.npoint.io/6003b0fb97a1493208f5").then(res => res.json());
 const technology = ref(null);
 const tech = ref([]);
 let all = data.technology;

@@ -1,6 +1,5 @@
 ---
 import Crewpart from "../components/Crewpart.vue";
-import Sus from "../components/Sus.vue";
 import Top from "../components/Top.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -11,9 +10,7 @@ import Layout from "../layouts/Layout.astro";
               <div class="cr">
                  <Top num="02" desc="meet your crew" />
               </div>
-              <Sus client:load>
                 <Crewpart client:load/>
-            </Sus>
             </div>
         </div>
     </main>
