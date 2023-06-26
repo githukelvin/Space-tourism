@@ -88,7 +88,7 @@ onMounted(() => {
             grid-template-columns: 1fr;
             gap: 1.5em;
         }
-        @include responsive(375px){
+        @include responsive(440px){
             display: flex;
             flex-direction: column-reverse;
         }
@@ -100,10 +100,11 @@ onMounted(() => {
                 margin:0 auto;
                 margin-top: 3.15em;
             }
-            @include responsive(375px){
+            @include responsive(440px){
                 width: 87.2%;
                 margin:0 auto;
                 margin-top: 3.15em;
+                padding-bottom: 4em;
             }
             h3{
              
@@ -121,8 +122,10 @@ onMounted(() => {
                     font-size:24px;
                     line-height:auto;
                 }
-                @include responsive(375px){
+                @include responsive(440px){
                     font-size: 16px;
+                    letter-spacing: 1px;
+                    font-weight: 300;
                 }
             }
             h1{
@@ -141,7 +144,7 @@ onMounted(() => {
                     margin-top: -0.15em;
 
                 } 
-                @include responsive(375px){
+                @include responsive(440px){
                     font-size: 24px;
                 }
                 
@@ -162,7 +165,7 @@ onMounted(() => {
                     line-height: 28px;
                     margin-top:0.33em;
                 } 
-                @include responsive(375px){
+                @include responsive(440px){
                     font-size: 15px;
                     line-height: 25px;
                 }
@@ -172,10 +175,11 @@ onMounted(() => {
         .right {
             position: relative;
             z-index: 22;
-           width: min-content;
+            width: min-content;
             margin-top: -2.9em;
             width: 568.07px;
-                height: 690px;
+            position: relative;
+            height: 690px;
             img{
                 width: 100%;
                 height: 690px;
@@ -198,7 +202,27 @@ onMounted(() => {
                     // position: absolute;
                     object-position: center;
                     // bottom: 0;
+                    
                 }
+            }
+            @include responsive(440px){
+                width:87.5%;
+
+                margin-top: -19em;
+
+                img{
+                    height: 13.9375rem;
+                }
+                &::after{
+                    content: '';
+                    width:100%;
+                    height:1px;
+                    background: #383B4B;
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+
+                    }
             }
 
         }
@@ -216,6 +240,13 @@ onMounted(() => {
             margin-inline:auto;
             top:17.5em;
             // margin-top: 2.5em;
+        }
+        @include responsive(440px){
+            width: fit-content;
+            position: relative;
+            left: 0;
+            margin-inline:auto;
+            top: 19em;
         }
        
         ul {

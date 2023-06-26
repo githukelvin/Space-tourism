@@ -89,7 +89,7 @@ onMounted(() => {
  @include response(768px){
     margin-left: 0;;
  }
-    @include response(375px){
+    @include response(440px){
         margin-left: 0;
         width:100%;
     }
@@ -104,7 +104,7 @@ onMounted(() => {
         margin-inline:auto;
         gap: 0;
     }
-    @include response(375px){
+    @include response(440px){
         width:100%;
     }
       .left{
@@ -125,7 +125,7 @@ onMounted(() => {
             width: 39.1%;
             height: 39.1%;
         }
-        @include response(375px){
+        @include response(440px){
             width: 170px;
             height: 170px;
         }
@@ -140,7 +140,7 @@ onMounted(() => {
             width: 74.61%;
             
         }
-        @include response(375px){
+        @include response(440px){
             width:87.2%;
             margin-top: 4em;
         }
@@ -162,7 +162,7 @@ onMounted(() => {
             text-align: center;
             margin-bottom: 0em;
         }
-        @include response(375px){
+        @include response(440px){
             font-size: 56px;
         }
        }
@@ -180,7 +180,7 @@ onMounted(() => {
             margin-inline:auto;
             margin-top:-5px;
         }
-        @include response(375px){
+        @include response(440px){
             font-size: 15px;
             line-height: 25px;
             width:95%;
@@ -204,7 +204,7 @@ onMounted(() => {
                 top: -1.9em;
             }
 
-            @include response(375px){
+            @include response(440px){
                 width: 100%;
                 margin-inline:auto;
                 
@@ -215,7 +215,7 @@ onMounted(() => {
             grid-template-columns: 1fr 1fr;
             padding-bottom: 2em;
         }
-        @include response(375px){
+        @include response(440px){
             grid-template-columns: 1fr;
             padding-bottom: 4em;
             gap:2em;
@@ -235,7 +235,7 @@ onMounted(() => {
                     letter-spacing: 2.36px;
                     text-align: center;
                 }
-                @include response(375px){
+                @include response(440px){
                     font-size: 14px;
                 }   
                 
@@ -253,7 +253,7 @@ onMounted(() => {
                     font-size: 28px;
                     line-height: auto;
                 }
-                @include response(375px){
+                @include response(440px){
                     font-size: 28px;
                 }
             }}
@@ -273,7 +273,7 @@ onMounted(() => {
         top:25.54em;
         // margin-top: 2em;
     }
-    @include response(375px){
+    @include response(440px){
         top: 16.54em;
     }
         ul{

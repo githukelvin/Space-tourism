@@ -60,7 +60,7 @@ header{
             &.active{
                 background-image: url("/assets/shared/icon-close.svg");
             }
-            @include responsive(375px){
+            @include responsive(440px){
                 display: block;
                 position: absolute;
                 top: 0;
@@ -81,7 +81,7 @@ header{
                 padding-right: 3em;
                 padding-left: 2.4em;
             }
-            @include responsive(375px){
+            @include responsive(440px){
                 width: 100%;
                 padding-right: 1.5em;
                 padding-left: 1.5em;
@@ -112,7 +112,7 @@ header{
             @include responsive(768px) {
               margin-right: 0em;  
             }
-            @include responsive(375px){
+            @include responsive(440px){
                flex-direction: column;
                align-items: flex-start;
                justify-content: flex-start;
@@ -128,7 +128,7 @@ header{
                 gap: .495em;
                 padding-block: 2.4em;
                 
-                @include responsive(375px){
+                @include responsive(440px){
                     padding-block: 1em;
                    &:hover{
                     border-right: 4px solid #fff;
@@ -156,7 +156,7 @@ header{
                         @include responsive(768px){
                             margin-right: 2.3em;
                         }
-                        @include responsive(375px){
+                        @include responsive(440px){
                             margin-right: 0em;
                             padding-left: 0em;
                         }
@@ -174,14 +174,14 @@ header{
                      background: #ccc;
                      transition: background 1s ease-in;
 
-                        @include responsive(375px){
+                        @include responsive(440px){
                             content: none;
                         }
                    
                  }
                  &.active{
                     border-bottom: 3px solid #fff ;
-                    @include responsive(375px){
+                    @include responsive(440px){
                         border-bottom: none;
                     }
                  }
@@ -210,7 +210,7 @@ header{
                      @include responsive(768px){
                         display: none;
                      }
-                     @include responsive(375px){
+                     @include responsive(440px){
                         display: block;
                       
                      }

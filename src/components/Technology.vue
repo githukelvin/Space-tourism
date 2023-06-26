@@ -126,7 +126,7 @@ onMounted(() => {
                         font-size: 24px;
                         letter-spacing: 1.5px;
                     }
-                    @include responsive(375px){
+                    @include responsive(440px){
                         width: 40px;
                         height: 40px;
                         font-size: 16px;
@@ -141,8 +141,8 @@ onMounted(() => {
                         margin-inline:auto;
                         padding-bottom: 2em;
                     }
-            // respon 375px
-            @include responsive(375px){
+            // respon 440px
+            @include responsive(440px){
                 width:87.2%;
             }
            
@@ -164,7 +164,7 @@ onMounted(() => {
                 margin-bottom: 1.3em;
 
             }
-            @include responsive(375px){
+            @include responsive(440px){
                 font-size: 14px;
                 letter-spacing: 2.362px;
                 margin-bottom: 1.5em;
@@ -184,7 +184,7 @@ onMounted(() => {
                 line-height: auto;
                 margin-bottom: .47em;
             }
-            @include responsive(375px){
+            @include responsive(440px){
                 font-size: 24px;
                 line-height: auto;
                 margin-bottom: .6em;
@@ -220,10 +220,10 @@ onMounted(() => {
         img{
             object-fit: cover;
             object-position: center;
-            @include responsive(375px){}
+            @include responsive(440px){}
         }
-        @include responsive(375px){
-            width: 375px;
+        @include responsive(440px){
+            width: 440px;
         }
     }
 }
