@@ -86,6 +86,10 @@ onMounted(() => {
             gap: 0em;
             flex-direction: column;
         }
+        @include responsive(440px){
+            margin-top: -19.1em;
+            padding-bottom: 4em;
+        }
                 .sideBar{
                     @include responsive(768px){
                         width:fit-content;
@@ -136,7 +140,7 @@ onMounted(() => {
             }
         }
         .info{
-            @include responsive(768px){
+            @include responsive(768px){ 
                         width:458px;
                         margin-inline:auto;
                         padding-bottom: 2em;
@@ -220,10 +224,15 @@ onMounted(() => {
         img{
             object-fit: cover;
             object-position: center;
-            @include responsive(440px){}
+            @include responsive(440px){
+                width:100%;
+            }
+            @include responsive(768px){
+                width:100%;
+            }
         }
         @include responsive(440px){
-            width: 440px;
+            width: 100%;
         }
     }
 }

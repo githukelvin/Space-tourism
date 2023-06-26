@@ -130,6 +130,8 @@ header{
                 
                 @include responsive(440px){
                     padding-block: 1em;
+                    align-items: center;
+                    height: auto;
                    &:hover{
                     border-right: 4px solid #fff;
                     opacity: .25;

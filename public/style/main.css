@@ -161,6 +161,8 @@ header .nav .navBar ul li {
 @media (max-width: 440px) {
   header .nav .navBar ul li {
     padding-block: 1em;
+    align-items: center;
+    height: auto;
   }
   header .nav .navBar ul li:hover {
     border-right: 4px solid #fff;
