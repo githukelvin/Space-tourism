@@ -11,17 +11,16 @@ import Navbar from '../components/Navbar.astro';
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Astro description"/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 		<link rel="preload" href="../fonts/Bellefair-Regular.woff2" as="font" type="font/woff2" crossorigin>
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/style/main.css">
-		<link rel="stylesheet" href="/style/spinkit.css">
+		<link rel="stylesheet" href="/style/main.css" >
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navbar  />
+		<Navbar client:load />
 		<slot />
 	</body>
 </html>

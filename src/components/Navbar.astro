@@ -10,15 +10,38 @@
        </div> 
        <div class="navBar">
         <ul>
-            <li  class="active" ><span>00</span><a href="/">home</a></li>
-            <li class="active"><span>01</span><a href="../destination">destination</a></li>
-            <li class="active"><span>02</span><a href="../crew">crew</a></li>
-            <li class="active"><span>03</span><a href="../tech">technology</a></li>
+            <li  class="om" ><span>00</span><a href="/">home</a></li>
+            <li ><span>01</span><a href="../destination">destination</a></li>
+            <li ><span>02</span><a href="../crew">crew</a></li>
+            <li ><span>03</span><a href="../tech">technology</a></li>
         </ul>
        </div>
        <div class="ham">
-        <img src="../assets/shared/icon-hamburger.svg" alt="hamburger icon">
+        <!-- <img src="../assets/shared/icon-hamburger.svg" alt="hamburger icon"> -->
        </div>
       </div>
     </div>
 </header>
+
+<script>
+    const ham = document.querySelector('.ham');
+    const navBar = document.querySelector('.navBar');
+    let om = document.querySelector('.om');
+
+
+  ham.addEventListener('click',()=>{
+    navBar.classList.toggle('active');
+    ham.classList.toggle('active');
+  })
+
+    
+    const li = document.querySelectorAll('li');
+    li.forEach(item=>{
+      item.addEventListener('click',()=>{
+        // let pre = document.querySelector('.active');
+        // pre.classList.remove('active');
+        item.classList.add('active');
+      })
+    })
+  
+</script>

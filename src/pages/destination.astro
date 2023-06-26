@@ -35,15 +35,20 @@ import Sus from "../components/Sus.vue";
         }
     }
     /* Small devices */
-    @media screen and (max-width: 375px) {
-        body {
-            background-image: url("../assets/destination/background-destination-mobile.jpg");
-            height: max-content;
-        }
-    }
+    
     .destination{
         width:75%;
         margin-inline:auto;
         background: #0b0d170c;
     }
+    @media screen and (max-width: 375px) {
+        body {
+            background-image: url("../assets/destination/background-destination-mobile.jpg");
+            height: max-content;
+        }
+        .destination{
+           width:100%; 
+        }
+    }
+
 </style>

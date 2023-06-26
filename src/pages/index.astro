@@ -95,6 +95,9 @@ import Layout from '../layouts/Layout.astro';
 			background-image: url("../assets/home/background-home-tablet.jpg");
 			height: max-content;
 		}
+		main{
+			height: inherit;
+		}
 		.content{
 			grid-template-columns: 1fr;
 			margin-top:6.5em;
@@ -132,8 +135,11 @@ import Layout from '../layouts/Layout.astro';
 	@media screen and (max-width:375px) {
 		body{
 			background-image: url("../assets/home/background-home-mobile.jpg");
-			height: max-content;
+			height:100%;
+			background-size:cover;
+			background-position: center;
 		}
+
 		.left{
 			width: 87.2% ;
 		}
@@ -145,11 +151,17 @@ import Layout from '../layouts/Layout.astro';
 			.left h1{
 				font-size: 80px;
 				letter-spacing: 0px;
+				text-align:center;
 			}
 
 			.right{
 				width:150px;
 				height: 150px;
+				margin-bottom: 2em;
+			}
+			.right a{
+				font-size:20px;
+				letter-spacing: 1.25px;
 			}
 
 		

@@ -44,8 +44,8 @@ header .nav::before {
   position: absolute;
   width: 473px;
   height: 1px;
-  left: 240px;
-  top: 88px;
+  left: 200px;
+  top: 50px;
   background: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.25;
@@ -58,10 +58,12 @@ header .nav::before {
 }
 header .nav .logo {
   padding-left: 3.5em;
+  z-index: 9999;
 }
 @media (max-width: 768px) {
   header .nav .logo {
     padding-left: 2.5em;
+    padding-top: 1em;
   }
 }
 header .nav .ham {
@@ -70,6 +72,13 @@ header .nav .ham {
   height: 24px;
   position: relative;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("/assets/shared/icon-hamburger.svg");
+}
+header .nav .ham.active {
+  background-image: url("/assets/shared/icon-close.svg");
 }
 @media (max-width: 375px) {
   header .nav .ham {
@@ -98,6 +107,7 @@ header .nav .navBar {
 }
 @media (max-width: 375px) {
   header .nav .navBar {
+    width: 100%;
     padding-right: 1.5em;
     padding-left: 1.5em;
     width: 254px;
@@ -109,7 +119,13 @@ header .nav .navBar {
     border: 0px solid #979797;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742271423px);
+    transform: translateX(-200%);
+    transition: transform 1s ease-in;
   }
+}
+header .nav .navBar.active {
+  transform: translate(0%);
+  transition: transform 1s ease-in;
 }
 header .nav .navBar ul {
   display: flex;
@@ -129,9 +145,9 @@ header .nav .navBar ul {
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
-    top: 200px;
+    top: 0;
     width: 100%;
-    height: 100%;
+    padding-bottom: 5em;
   }
 }
 header .nav .navBar ul li {
@@ -145,6 +161,10 @@ header .nav .navBar ul li {
 @media (max-width: 375px) {
   header .nav .navBar ul li {
     padding-block: 1em;
+  }
+  header .nav .navBar ul li:hover {
+    border-right: 4px solid #fff;
+    opacity: 0.25;
   }
 }
 header .nav .navBar ul li:not(:last-child) {
@@ -185,14 +205,22 @@ header .nav .navBar ul li:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 3px;
   background: #ccc;
   transition: background 1s ease-in;
 }
 @media (max-width: 375px) {
   header .nav .navBar ul li:hover::after {
-    right: 0;
+    content: none;
+  }
+}
+header .nav .navBar ul li.active {
+  border-bottom: 3px solid #fff;
+}
+@media (max-width: 375px) {
+  header .nav .navBar ul li.active {
+    border-bottom: none;
   }
 }
 header .nav .navBar ul li a {

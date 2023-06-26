@@ -89,6 +89,10 @@ onMounted(() => {
  @include response(768px){
     margin-left: 0;;
  }
+    @include response(375px){
+        margin-left: 0;
+        width:100%;
+    }
 
   .divs{
     display: grid;
@@ -101,7 +105,7 @@ onMounted(() => {
         gap: 0;
     }
     @include response(375px){
-        width:87.2%;
+        width:100%;
     }
       .left{
         padding-left: 1em;
@@ -138,6 +142,7 @@ onMounted(() => {
         }
         @include response(375px){
             width:87.2%;
+            margin-top: 4em;
         }
 
 
@@ -178,6 +183,7 @@ onMounted(() => {
         @include response(375px){
             font-size: 15px;
             line-height: 25px;
+            width:95%;
         }
 	}
     .stats{
@@ -199,7 +205,9 @@ onMounted(() => {
             }
 
             @include response(375px){
-                width: 87.2%;
+                width: 100%;
+                margin-inline:auto;
+                
             }
         }
         @include response(768px){
@@ -209,6 +217,8 @@ onMounted(() => {
         }
         @include response(375px){
             grid-template-columns: 1fr;
+            padding-bottom: 4em;
+            gap:2em;
         }
           .stat {
              h2{
@@ -262,6 +272,9 @@ onMounted(() => {
         margin-inline:auto;
         top:25.54em;
         // margin-top: 2em;
+    }
+    @include response(375px){
+        top: 16.54em;
     }
         ul{
             list-style: none;
