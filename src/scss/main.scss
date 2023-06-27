@@ -5,6 +5,9 @@
         @content;
     }
 }
+body.active{
+    overflow: hidden;
+}
 header{
     padding-top: 2.5em;
     background: transparent;
@@ -83,12 +86,11 @@ header{
             }
             @include responsive(440px){
                 width: 100%;
-                padding-right: 1.5em;
-                padding-left: 1.5em;
+                padding-inline: 1.5em;
                  width: 254px;
-                 height: 667px;
-                top: 0px;
+                 height: 680px;
                 z-index: 999;
+                top: 0;
                 position: absolute;
                 right: 0px;
                 border: 0px solid #979797;
@@ -117,8 +119,9 @@ header{
                align-items: flex-start;
                justify-content: flex-start;
                position: relative;
-               top: 0;
+               top: 9em;
                width: 100%;
+               height: 100%;
                padding-bottom: 5em;               
             }
             li{
@@ -129,12 +132,15 @@ header{
                 padding-block: 2.4em;
                 
                 @include responsive(440px){
-                    padding-block: 1em;
+                    padding-block: .5em;
+                    // padding-right: 8em;
                     align-items: center;
-                    height: auto;
+                    height: fit-content;
+                    width: 100%;
+                    gap:.7em;
+                    margin-bottom: .7em;
                    &:hover{
                     border-right: 4px solid #fff;
-                    opacity: .25;
                    }
                 }
                 &:not(:last-child){

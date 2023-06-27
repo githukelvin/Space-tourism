@@ -21,6 +21,10 @@
   margin-inline: auto;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 header {
   padding-top: 2.5em;
   background: transparent;
@@ -108,12 +112,11 @@ header .nav .navBar {
 @media (max-width: 440px) {
   header .nav .navBar {
     width: 100%;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
+    padding-inline: 1.5em;
     width: 254px;
-    height: 667px;
-    top: 0px;
+    height: 680px;
     z-index: 999;
+    top: 0;
     position: absolute;
     right: 0px;
     border: 0px solid #979797;
@@ -145,8 +148,9 @@ header .nav .navBar ul {
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
-    top: 0;
+    top: 9em;
     width: 100%;
+    height: 100%;
     padding-bottom: 5em;
   }
 }
@@ -160,13 +164,15 @@ header .nav .navBar ul li {
 }
 @media (max-width: 440px) {
   header .nav .navBar ul li {
-    padding-block: 1em;
+    padding-block: 0.5em;
     align-items: center;
-    height: auto;
+    height: fit-content;
+    width: 100%;
+    gap: 0.7em;
+    margin-bottom: 0.7em;
   }
   header .nav .navBar ul li:hover {
     border-right: 4px solid #fff;
-    opacity: 0.25;
   }
 }
 header .nav .navBar ul li:not(:last-child) {

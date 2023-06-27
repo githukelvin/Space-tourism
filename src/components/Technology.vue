@@ -69,7 +69,7 @@ onMounted(() => {
 .content{
     display: flex;
     width: 100%;
-    @include responsive(768px){
+    @include responsive(840px){
         flex-direction:column-reverse;
     }
     .left{
@@ -79,7 +79,7 @@ onMounted(() => {
         margin-left: 10.3em;
         margin-top:8.5em;
 
-        @include responsive(768px){
+        @include responsive(840px){
             width: 100%;
             margin-left: 0;
             margin-top: -10.1em;
@@ -91,7 +91,7 @@ onMounted(() => {
             padding-bottom: 4em;
         }
                 .sideBar{
-                    @include responsive(768px){
+                    @include responsive(840px){
                         width:fit-content;
                         margin-inline:auto;
                         margin-bottom: 2.7em;
@@ -102,7 +102,7 @@ onMounted(() => {
                 display:flex;
                 flex-direction: column;
                 gap: 2em;
-                @include responsive(768px){
+                @include responsive(840px){
                     flex-direction: row;
                     gap: 1em;
                 }
@@ -124,7 +124,7 @@ onMounted(() => {
                         color:#0b0d17;
                         background: #fff;
                     }
-                    @include responsive(768px){
+                    @include responsive(840px){
                         width: 60px;
                         height: 60px;
                         font-size: 24px;
@@ -140,7 +140,7 @@ onMounted(() => {
             }
         }
         .info{
-            @include responsive(768px){ 
+            @include responsive(840px){ 
                         width:458px;
                         margin-inline:auto;
                         padding-bottom: 2em;
@@ -160,7 +160,7 @@ onMounted(() => {
             color:#d0d6f9;
             margin-bottom: 1.1em;
             margin-top: 2px;
-            @include responsive(768px){
+            @include responsive(840px){
                 text-align: center;
                 letter-spacing: 2.7px;
                 line-height:auto;
@@ -182,7 +182,7 @@ onMounted(() => {
             font-weight: 300;
             line-height: 1;
             margin-bottom: .35em;
-            @include responsive(768px){
+            @include responsive(840px){
                 text-align: center;
                 font-size: 40px;
                 line-height: auto;
@@ -201,7 +201,7 @@ onMounted(() => {
             font-size: 18px;
             width: 80%;
             color:#d0d6f9;
-            @include responsive(768px){
+            @include responsive(840px){
                 text-align: center;
                 line-height: 28px;
                 font-size: 1em;
@@ -216,7 +216,7 @@ onMounted(() => {
         margin-top:1.65em;
         height: 527px;
         margin-left: 7em;
-        @include responsive(768px){
+        @include responsive(840px){
             width: 100%;
             margin-left: 0;
             margin-top:3.4em;
@@ -227,7 +227,7 @@ onMounted(() => {
             @include responsive(440px){
                 width:100%;
             }
-            @include responsive(768px){
+            @include responsive(840px){
                 width:100%;
             }
         }

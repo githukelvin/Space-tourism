@@ -86,7 +86,7 @@ onMounted(() => {
 }
 .content{
  margin-left: 2.2em;
- @include response(768px){
+ @include response(840px){
     margin-left: 0;;
  }
     @include response(440px){
@@ -98,9 +98,9 @@ onMounted(() => {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 9.8em;
-    @include response(768px){
+    @include response(840px){
         grid-template-columns: 1fr;
-        width: 74.61%;
+        width:573px;
         margin-inline:auto;
         gap: 0;
     }
@@ -118,7 +118,7 @@ onMounted(() => {
             object-fit: contain;
             object-position: center;
         }
-        @include response(768px){
+        @include response(840px){
             margin-inline:auto;
             margin-top: 1.5em;
             padding-left: 0;
@@ -134,10 +134,10 @@ onMounted(() => {
         margin-top:6.3em;
         width: 100%;
 
-        @include response(768px){
+        @include response(840px){
             margin-top: 6.7em;
             margin-inline:auto;
-            width: 74.61%;
+            width:573px;
             
         }
         @include response(440px){
@@ -156,7 +156,7 @@ onMounted(() => {
         text-transform: uppercase;
         margin-bottom: .15em;
         color: #FFFFFF;
-        @include response(768px){
+        @include response(840px){
             font-size: 80px;
             line-height: auto;
             text-align: center;
@@ -172,7 +172,7 @@ onMounted(() => {
 		line-height: 32px;
 		font-weight: 300;
 		font-family: 'Barlow', sans-serif;
-        @include response(768px){
+        @include response(840px){
             font-size: 16px;
             text-align: center;
             line-height: 28px;
@@ -199,7 +199,7 @@ onMounted(() => {
             height: 1px;
             background-color: #383B4B;
             top: -1.66em;
-            @include response(768px){
+            @include response(840px){
                 width:573px;
                 top: -1.9em;
             }
@@ -210,7 +210,7 @@ onMounted(() => {
                 
             }
         }
-        @include response(768px){
+        @include response(840px){
             display:grid;
             grid-template-columns: 1fr 1fr;
             padding-bottom: 2em;
@@ -230,7 +230,7 @@ onMounted(() => {
                 letter-spacing: 2.3625px;
                 text-transform: uppercase;  
                 color:#d0d6f9;
-                @include response(768px){
+                @include response(840px){
                     line-height: auto;
                     letter-spacing: 2.36px;
                     text-align: center;
@@ -249,7 +249,7 @@ onMounted(() => {
                 line-height: 32px;
                 text-transform: uppercase;
                 color: #FFFFFF;
-                @include response(768px){
+                @include response(840px){
                     font-size: 28px;
                     line-height: auto;
                 }
@@ -267,10 +267,10 @@ onMounted(() => {
     left:617px;
     top: 64px;
     width:fit-content;
-    @include response(768px){
+    @include response(840px){
         left: 0;
         margin-inline:auto;
-        top:25.54em;
+        top:20.54em;
         // margin-top: 2em;
     }
     @include response(440px){

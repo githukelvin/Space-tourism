@@ -31,6 +31,11 @@
   ham.addEventListener('click',()=>{
     navBar.classList.toggle('active');
     ham.classList.toggle('active');
+    if(ham.classList.contains("active")){
+      document.querySelector('body').classList.add("active")
+    }else{
+      document.querySelector('body').classList.remove("active")
+    }
   })
 
     

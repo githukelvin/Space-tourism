@@ -75,7 +75,7 @@ onMounted(() => {
     margin-inline:auto;
     position: relative;
 
-    @include responsive(768px){
+    @include responsive(840px){
         width: 100%;
     }
 
@@ -84,7 +84,7 @@ onMounted(() => {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3.5em;
-        @include responsive(768px){
+        @include responsive(840px){
             grid-template-columns: 1fr;
             gap: 1.5em;
         }
@@ -95,7 +95,7 @@ onMounted(() => {
         .left {
             width: 532px;
             margin-top:9.6em;
-            @include responsive(768px){
+            @include responsive(840px){
                 width: 59.64%;
                 margin:0 auto;
                 margin-top: 3.15em;
@@ -117,7 +117,7 @@ onMounted(() => {
                 color: #FFFFFF;
                 mix-blend-mode: normal;
                 opacity: 0.5;  
-                @include responsive(768px){
+                @include responsive(840px){
                     text-align: center;
                     font-size:24px;
                     line-height:auto;
@@ -137,7 +137,7 @@ onMounted(() => {
                 line-height: 64px;
                 text-transform: uppercase;
                 color: #FFFFFF;
-                @include responsive(768px){
+                @include responsive(840px){
                     text-align: center;
                     font-size:40px;
                     line-height:auto;
@@ -158,7 +158,7 @@ onMounted(() => {
                 line-height: 32px;
                 color: #D0D6F9;
                 width: 85%;
-                @include responsive(768px){
+                @include responsive(840px){
                     text-align: center;
                     font-size:16px;
                     width:100%;
@@ -189,7 +189,7 @@ onMounted(() => {
                object-position: center;
                bottom: 0;
             }
-            @include responsive(768px){
+            @include responsive(840px){
                 width: 456.37px;
                 height: 556px;
                 margin-top: 5em;
@@ -234,7 +234,7 @@ onMounted(() => {
         height: 15px;
         bottom:83px;
 
-        @include responsive(768px){
+        @include responsive(840px){
             width: 100%;
             left: 18em;
             margin-inline:auto;
@@ -266,7 +266,7 @@ onMounted(() => {
                 mix-blend-mode: normal;
                 opacity: 0.17;
                 cursor: pointer;
-                @include responsive(768px){
+                @include responsive(840px){
                     width: 10px;
                     height: 10px;
                 }
